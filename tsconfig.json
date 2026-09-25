@@ -13,7 +13,6 @@
     "strict": true,
     "esModuleInterop": true,
     "ignoreDeprecations": "6.0",
-    "types": ["node"],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
