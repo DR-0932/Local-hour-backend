@@ -18,7 +18,7 @@
   },
   "scripts": {
     "dev": "bun run --watch src/index.ts",
-    "build": "bun build src/index.ts --outdir dist --target node",
+    "build": "prisma generate && bun build src/index.ts --outdir dist --target node",
     "start": "bun run dist/index.js"
   },
   "dependencies": {
