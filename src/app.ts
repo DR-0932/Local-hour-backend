@@ -3,9 +3,9 @@ import cors from "cors";
 import type { Request, Response } from "express";
 import cookieParser from "cookie-parser";
 
-import { admin_router } from "./routes/adminRoutes";
-import auth_router from "./routes/authRoutes";
-import { business_router } from "./routes/businessRoutes";
+import { admin_router } from "./routes/adminRoutes.js";
+import auth_router from "./routes/authRoutes.js";
+import { business_router } from "./routes/businessRoutes.js";
 
 const app = express();
 

@@ -1,6 +1,6 @@
 import type { Request,Response } from "express";
-import { prisma } from "../../lib/prisma";
-import { event_registration_schema} from "../../validation/validation";
+import { prisma } from "../../lib/prisma.js";
+import { event_registration_schema} from "../../validation/validation.js";
 // import { razorpay } from "../utils/razorpay";
 // import crypto from "crypto";
 

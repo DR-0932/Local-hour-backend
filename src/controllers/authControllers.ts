@@ -2,8 +2,8 @@ import type { Request, Response } from "express";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import "dotenv/config";
-import { prisma } from "../../lib/prisma";
-import { login_schema, signup_schema } from "../../validation/validation";
+import { prisma } from "../../lib/prisma.js";
+import { login_schema, signup_schema } from "../../validation/validation.js";
 const JWT_SECRET = process.env.JWT_SECRET as string;
 
 if (!JWT_SECRET) {
