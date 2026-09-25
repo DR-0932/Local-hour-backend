@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
 import { prisma } from "../../lib/prisma";
 
-export async function createEvent(req: Request, res: Response) {
+export async function createEvent(req: Request<{id:string}>, res: Response) {
   const {
     title,
     description,
@@ -57,10 +57,10 @@ export async function createEvent(req: Request, res: Response) {
 
 export async function deleteEvent(req: Request, res: Response) {
     const { id } = req.params;
-
-    if (!id) {
-        res.status(400).json({ error: "Event ID is required" });
-        return
+    
+    if (!id || typeof id !== "string") {
+        res.status(400).json({ error: "Event ID is required and must be a string" });
+        return;
     }
 
     try {
@@ -85,9 +85,9 @@ export async function deleteEvent(req: Request, res: Response) {
 
 export async function getParticipants(req: Request, res: Response){
     const id = req.params.id;
-    if(!id){
-        res.status(401).json({error:"bad request"})
-        return
+    if (!id || typeof id !== "string") {
+        res.status(400).json({ error: "Event ID is required and must be a string" });
+        return;
     }
 
     try{
