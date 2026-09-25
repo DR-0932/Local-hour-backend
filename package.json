@@ -7,7 +7,6 @@
     "@types/bun": "^1.4.2",
     "@types/cookie-parser": "^1.4.10",
     "@types/cors": "^2.8.19",
-    "@types/node": "^22.20.2",
     "@types/pg": "^8.23.1",
     "prisma": "7.10.0",
     "tsx": "^4.23.13",
@@ -22,6 +21,7 @@
       "start": "bun run src/server.ts"
     },
   "dependencies": {
+      "@types/node": "^22.20.2",
     "@prisma/adapter-pg": "^7.10.0",
     "@prisma/client": "7.10.0",
     "@types/bcrypt": "^6.0.0",
