@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { createEvent, deleteEvent } from "../controllers/adminControllers";
-import { authMiddleware } from "../controllers/authMiddleware";
+import { createEvent, deleteEvent } from "../controllers/adminControllers.js";
+import { authMiddleware } from "../controllers/authMiddleware.js";
 
 export const admin_router: Router = Router();
 
