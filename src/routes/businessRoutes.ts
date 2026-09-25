@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getEvents, register_for_free_event } from "../controllers/businessControllers";
+import { getEvents, register_for_free_event } from "../controllers/businessControllers.js";
 
 
 export const business_router:Router = Router();
