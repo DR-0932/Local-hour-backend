@@ -17,7 +17,7 @@
     "typescript": "^5"
   },
   "scripts": {
-    "dev": "bun run --watch src/index.ts",
+    "dev": "bun run --watch src/server.ts",
     "build": "prisma generate && bun build src/index.ts --outdir dist --target node",
     "start": "bun run dist/index.js"
   },
