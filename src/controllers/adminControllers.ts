@@ -175,29 +175,3 @@ export async function getParticipants(req: Request, res: Response){
 //   }
 // } //manual or after deadline.//atleast hide it
 
-
-
-// export async function deleteEvent(req: Request, res: Response) {
-//   const { id } = req.params;
-
-//   if (!id) {
-//     return res.status(400).json({ error: "Event ID is required" });
-//   }
-
-//   try {
-//     const deletedEvent = await prisma.event.delete({
-//       where: { id },
-//     });
-
-//     return res.status(200).json({
-//       message: "Event permanently deleted",
-//       event: deletedEvent,
-//     });
-//   } catch (error: any) {
-//     if (error.code === "P2025") {
-//       return res.status(404).json({ error: "Event not found" });
-//     }
-//     console.error("Delete Event Error:", error);
-//     return res.status(500).json({ error: "Internal server error" });
-//   }
-// }

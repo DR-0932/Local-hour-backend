@@ -8,3 +8,4 @@ admin_router.post("/createEvent", authMiddleware, createEvent);
 admin_router.delete("/event/:id", authMiddleware, deleteEvent);
 // admin_router.patch("/delete",hideEvent)
 // admin_router.put("/reschedule",rescheduleEvent)
+//need to add delete event
