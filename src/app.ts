@@ -10,22 +10,14 @@ import { business_router } from "./routes/businessRoutes.js";
 const app = express();
 
 const allowedOrigins = [
-  "https://local-hour-anti-brain-rotxi.vercel.app",
-  ...(process.env.FRONTEND_URL ?? "").split(","),
   "http://localhost:3000",
   "http://127.0.0.1:3000",
-].map((origin) => origin.trim().replace(/\/$/, "")).filter(Boolean);
+  "https://local-hour-anti-brain-rot-git-main-dhruv-1c79f048.vercel.app",
+];
 
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin.replace(/\/$/, ""))) {
-        callback(null, true);
-        return;
-      }
-
-      callback(new Error("Not allowed by CORS"));
-    },
+    origin: allowedOrigins,
     credentials: true,
   })
 );
