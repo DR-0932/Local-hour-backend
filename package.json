@@ -19,7 +19,8 @@
   "scripts": {
     "dev": "bun run --watch src/server.ts",
     "build": "prisma generate",
-    "start": "bun run src/server.ts"
+    "start": "bun run src/server.ts",
+    "postinstall": "prisma generate"
   },
   "allowScripts": {
     "@prisma/engines": true,
