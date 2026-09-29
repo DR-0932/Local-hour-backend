@@ -21,6 +21,12 @@
     "build": "prisma generate",
     "start": "bun run src/server.ts"
   },
+  "allowScripts": {
+    "@prisma/engines": true,
+    "bcrypt": true,
+    "esbuild": true,
+    "prisma": true
+  },
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.0",
     "@prisma/client": "7.10.0",
